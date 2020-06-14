@@ -127,3 +127,23 @@ def game_hash
 end
 
 # Write code here
+def num_points_scored(player_name)
+  #returns the points scored for that players. 
+end
+
+def shoe_size(player_name)
+end
+
+def team_colors(team_name)
+  #returns an array
+end
+
+def team_names()
+  #returns an array of team names
+end
+
+def player_stats(players_name)
+  #return hash of player stats
+end
+
+def big_shoe_rebounds
