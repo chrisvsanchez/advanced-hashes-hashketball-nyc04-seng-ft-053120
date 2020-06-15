@@ -193,11 +193,32 @@ def player_numbers(team)
    end
 end
 
-def player_stats(players_name)
+def player_stats(name)
   #return hash of player stats
-  
+  game_hash.each do |home_away, team_color_player|
+    team_color_player[:players].each do |player|
+      if player[:player_name] == name
+        # binding.pry
+        return player
+      end
+    end
+  end
 end
  
 def big_shoe_rebounds
+  result = 0
+  final_rebound = 0
   # find player with biggest shoe size 
+  game_hash.each do |home_away, team_color_player|
+    team_color_player[:players].each do |player|
+      counter = 0
+      while counter < team_color_player[:players].count  
+      if  team_color_player[:players][counter][:shoe] > result
+         team_color_player[:players][counter][:shoe] = result
+        team_color_player[:players][counter][:rebounds] = final_rebound
+      end
+    end
+    end
+  end
+  return final_rebound
 end
