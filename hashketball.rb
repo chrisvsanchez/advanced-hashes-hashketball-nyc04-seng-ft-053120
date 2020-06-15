@@ -207,6 +207,8 @@ end
  
 def big_shoe_rebounds
   # find player with biggest shoe size 
+  
+  result = nil
   game_hash.each do |home_away, team_color_player|
     team_color_player[:players].each do |player|
       if player[:shoe] > result
