@@ -211,7 +211,7 @@ def big_shoe_rebounds
   game_hash.each do |home_away, team_color_players|
     counter = 0
     while counter < team_color_players[:players].length
-    team_color_players[:players][counter][:shoe]. do |player, shoe|
+    team_color_players[:players][counter][:shoe].each do |player, shoe|
       if player[:shoe] > biggest_size
         biggest_size = player[:shoe]
       end
