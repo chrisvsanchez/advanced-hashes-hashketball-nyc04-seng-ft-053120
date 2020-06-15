@@ -187,7 +187,8 @@ def player_numbers(team)
        numbers << game_hash[:away][:players][2][:number]
        numbers << game_hash[:away][:players][3][:number]
        numbers << game_hash[:away][:players][4][:number]
-       return numbers 
+       return numbers
+       # change index of num to while loop increment until reaching length
      end
    end
 end
@@ -198,5 +199,5 @@ def player_stats(players_name)
 end
  
 def big_shoe_rebounds
-  
+  # find player with biggest shoe size 
 end
