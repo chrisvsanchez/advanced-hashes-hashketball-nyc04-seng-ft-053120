@@ -215,7 +215,8 @@ def big_shoe_rebounds
       end
       binding.pry
     end
-  end
+  end 
+  return result[:rebounds]
 end
 
 # def big_shoe_rebounds
