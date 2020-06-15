@@ -212,7 +212,7 @@ def big_shoe_rebounds
   game_hash.each do |home_away, team_color_player|
     team_color_player[:players].each do |player|
       if player[:shoe] > result
-        return player[:shoe]
+        result = player[:shoe]
       end
     end
   end
