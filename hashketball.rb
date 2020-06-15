@@ -213,7 +213,7 @@ def big_shoe_rebounds
     while counter < team_color_players[:players].length
     team_color_players[:players][counter][:shoe].each do |player, shoe|
       if player[:shoe] > biggest_size
-        biggest_size = player[:shoe]
+        biggest_size = player[:shoe].to_i
       end
     end
     counter +=1
