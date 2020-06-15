@@ -206,20 +206,32 @@ def player_stats(name)
 end
  
 def big_shoe_rebounds
-  result = 0
-  final_rebound = 0
   # find player with biggest shoe size 
-  game_hash.each do |home_away, team_color_player|
-    team_color_player[:players].each do |player|
-      counter = 0
-      while counter < team_color_player[:players].count  
-      if  team_color_player[:players][counter][:shoe] > result
-         team_color_player[:players][counter][:shoe] = result
-        team_color_player[:players][counter][:rebounds] = final_rebound
-      end
-      counter += 1
-    end
-    end
-  end
-  return final_rebound
+  biggest_size = 0
+  game_hash.each do |home_away, team_color_players|
+    counter = 0
+    while counter < team_color_players[:players].length
+    team_color_players[:players][counter][:shoe].do |player, shoe|
+      if player[shoe] > biggest_size
+    
 end
+
+# def big_shoe_rebounds
+#   result = 0
+#   final_rebound = 0
+#   # find player with biggest shoe size 
+#   game_hash.each do |home_away, team_color_player|
+      
+#     team_color_player[:players].each do |player|
+#       counter = 0
+#       while counter < team_color_player[:players].count  
+#       if  team_color_player[:players][counter][:shoe] > result
+#          team_color_player[:players][counter][:shoe] = result
+#         team_color_player[:players][counter][:rebounds] = final_rebound
+#       end
+#       counter += 1
+#     end
+#     end
+#   end
+#   return final_rebound
+# end
