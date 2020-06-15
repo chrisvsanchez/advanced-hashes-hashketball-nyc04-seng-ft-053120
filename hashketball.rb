@@ -213,6 +213,7 @@ def big_shoe_rebounds
     team_color_player[:players].each do |player|
       if player[:shoe] > result 
         result = player[:shoe]
+        player_rebound = player[:rebounds]
       end
       # binding.pry
     end
