@@ -218,6 +218,7 @@ def big_shoe_rebounds
     end
     counter +=1
 end
+binding.pry
 end 
 
 # def big_shoe_rebounds
