@@ -217,6 +217,7 @@ def big_shoe_rebounds
          team_color_player[:players][counter][:shoe] = result
         team_color_player[:players][counter][:rebounds] = final_rebound
       end
+      counter += 1
     end
     end
   end
