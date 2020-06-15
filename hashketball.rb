@@ -214,10 +214,10 @@ def big_shoe_rebounds
       if player[:shoe] > result || result == nil 
         result = player[:shoe]
       end
-      return player[:rebounds]
+      binding.pry
     end
   end
-  # return result
+  return result
 end
 
 # def big_shoe_rebounds
