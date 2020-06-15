@@ -207,19 +207,13 @@ end
  
 def big_shoe_rebounds
   # find player with biggest shoe size 
-  biggest_size = 0
-  game_hash.each do |home_away, team_color_players|
-    counter = 0
-    while counter < team_color_players[:players].length
-    team_color_players[:players][counter][:shoe].each do |player, shoe|
-      if player[:shoe] > biggest_size
-        biggest_size = player[:shoe].to_i
+  game_hash.each do |home_away, team_color_player|
+    team_color_player[:players].each do |player|
+      if player[:shoe] > result
+        return player[:shoe]
       end
     end
-    counter +=1
-end
-binding.pry
-end 
+  end
 end
 
 # def big_shoe_rebounds
